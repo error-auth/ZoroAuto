@@ -52,7 +52,7 @@ async def main():
     async def handle_already_fishing(event):
         if "Do /stopfish" in event.raw_text:
             try:
-                await asyncio.sleep(1.0)
+                await asyncio.sleep(1.7)
                 await client.send_message(5284997893, '/stopfish')
                 print('Sent /stopfish message')
             except (asyncio.TimeoutError, MessageIdInvalidError):
@@ -62,7 +62,7 @@ async def main():
     async def handle_stop_fishing(event):
         if "You stopped fishing!" in event.raw_text:
             try:
-                await asyncio.sleep(0.8)
+                await asyncio.sleep(1.4)
                 await client.send_message(5284997893, '/fish')
                 print('Sent /fish message after stopping fishing')
             except (asyncio.TimeoutError, MessageIdInvalidError):
