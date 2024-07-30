@@ -39,7 +39,7 @@ async def main():
         if "Your rod is broken!" in event.raw_text:
             try:
                 print('Rod is broken, waiting to regenerate \n ....')
-                await asyncio.sleep(180)  # Wait for 60 seconds
+                await asyncio.sleep(32)  # Wait for 32 seconds
                 print('\n Rod has regenerated, preparing to fish again')
                 await client.send_message(5284997893, '/fish')  # send /fish message
                 print('\n Sent /fish message')
